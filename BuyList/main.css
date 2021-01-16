@@ -1,0 +1,133 @@
+body {
+    background: #cdcbcb;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.main-container {
+    max-width: 100%;
+    padding-top:100px;
+    width:723px;
+    align-items:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.in-row {
+    display:flex;
+    flex-direction:row;
+
+}
+
+.container {
+    min-height: 40px;
+    height: auto;
+    padding:10px;
+}
+
+.left {
+    width:68%;
+}
+.right {
+    width:32%;
+}
+
+.visible {
+    background-color: white;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.circle {
+    border-radius:50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.light-gray {
+    background-color: lightgray;
+}
+
+.input-border {
+    border-style: solid;
+    border-width: thin;
+    border-color: gray;
+}
+
+.label-container {
+    width:40%;
+}
+
+.number-container {
+    width: 120px;
+}
+
+.sell-container {
+    margin-left: 15%;
+    width:auto;
+}
+
+.number-button {
+    width:40px;
+}
+
+.number {
+    text-align: center;
+    width: 40px;
+}
+
+.label {
+    padding-top: 10px;
+}
+
+.sell-button {
+    height: 40px;
+}
+
+.del-button {
+    width: 40px;
+    height: 40px;
+}
+
+.gray-font {
+    color:lightgray;
+}
+
+.bold {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.border {
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: gray;
+}
+
+button {
+    border: none;
+    box-shadow: 0 3px 0 gray;
+}
+
+.orange {
+    background-color: orange;
+    color: white;
+}
+
+.small-circle {
+    width:18px;
+    height:18px;
+    text-align: center;
+}
+
+.small-container {
+    margin:3px;
+    padding-top:7px;
+}
