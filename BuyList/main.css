@@ -30,7 +30,6 @@ input {
 
     padding:0 20px 0 20px;
     height:30px;
-    border:1px solid purple;
 
     background-color: purple;
     border-top-left-radius: 20px;
@@ -42,6 +41,16 @@ input {
     border-color: darkslateblue;
     background-color: darkslateblue;
     height:70px;
+}
+
+@media print {
+    .badge {
+        height:40px;
+        border:1px solid purple;
+    }
+    .badge-title {
+        display: none;
+    }
 }
 
 .badge-title {
