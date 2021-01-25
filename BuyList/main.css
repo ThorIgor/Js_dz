@@ -1,5 +1,5 @@
 body {
-    min-width: 800px;
+    min-width:400px;
 
     background: #cdcbcb;
     font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
@@ -23,6 +23,50 @@ input {
     margin-right:auto;
 }
 
+.badge {
+    position: fixed;
+    left: 20px;
+    bottom:0px;
+
+    padding:0 20px 0 20px;
+    height:30px;
+    border:1px solid purple;
+
+    background-color: purple;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 1s ease;
+}
+
+.badge:hover {
+    border-color: darkslateblue;
+    background-color: darkslateblue;
+    height:70px;
+}
+
+.badge-title {
+    padding:5px;
+
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.badge-created {
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.badge-name {
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+}
+
 .doubled {
     display:flex;
     flex-direction:row;
@@ -40,9 +84,24 @@ input {
     width:33%;
     height: min-content;
     margin:10px;
+    display: block;
 
     background-color: white;
     border-radius: 5px;
+}
+
+@media(max-width:600px) {
+    .doubled {
+       display:block;
+    }
+
+    .right-container {
+        width:95%;
+    }
+
+    .left-container {
+        width:95%;
+    }
 }
 
 .input-container {
@@ -74,6 +133,10 @@ input {
     font-weight: bold;
     box-sizing: border-box;
     box-shadow: 0 3px 0 darkblue;
+}
+
+.input-button:hover {
+    background-color: darkblue;
 }
 
 .goods-container {
@@ -114,6 +177,10 @@ input {
     box-shadow: 0 3px 0 darkred;
 }
 
+.minus-button:hover {
+    background-color: darkred;
+}
+
 .number-container {
     margin: 5px;
     width:30px;
@@ -142,6 +209,10 @@ input {
     box-shadow: 0 3px 0 darkgreen;
 }
 
+.plus-button:hover {
+    background-color: darkgreen;
+}
+
 .sell-button {
     display:inline;
     margin: 5px;
@@ -156,6 +227,10 @@ input {
     border-radius: 5px;
 }
 
+.sell-button:hover {
+    background-color: gray;
+}
+
 .delete-button {
     display:inline;
     margin: 5px;
@@ -166,6 +241,10 @@ input {
     font-weight: bold;
     box-shadow: 0 3px 0 darkred;
     border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: darkred;
 }
 
 .remained-container {
