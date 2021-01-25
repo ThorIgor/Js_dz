@@ -14,6 +14,30 @@ input {
     margin: 0;
 }
 
+[data-tooltip] {
+    position: relative;
+}
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 100px;
+    left: -35px;
+    top: 0;
+
+    background: purple;
+    color: lightgray;
+    padding: 5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s;
+    border-radius:20px;
+    font-size:12px;
+}
+[data-tooltip]:hover::before {
+    opacity: 1;
+    top: -30px;
+}
+
 .main-container {
     max-width: 100%;
     padding-top:100px;
@@ -34,7 +58,7 @@ input {
     background-color: purple;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .badge:hover {
