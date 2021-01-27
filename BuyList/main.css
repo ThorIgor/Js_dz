@@ -21,7 +21,7 @@ input {
     content: attr(data-tooltip);
     position: absolute;
     width: 100px;
-    left: -35px;
+    left: calc(-55px + 50%);
     top: 0;
 
     background: purple;
