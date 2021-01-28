@@ -10,6 +10,10 @@ button {
     margin: 0;
 }
 
+button:focus {
+    outline: none;
+}
+
 input {
     margin: 0;
 }
@@ -212,6 +216,11 @@ input {
 
 .minus-button:hover {
     background-color: darkred;
+}
+
+.min {
+    background-color: indianred;
+    box-shadow: 0 3px 0 #a84b4b;
 }
 
 .number-container {
