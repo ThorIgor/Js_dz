@@ -111,6 +111,7 @@ input {
 
 .left-container {
     width:67%;
+    height:min-content;
     margin:10px;
 
     background-color: white;
@@ -157,6 +158,13 @@ input {
     box-sizing: border-box;
 }
 
+.goods-input-field {
+    height: 20px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
 .input-button {
     display:inline;
     width:30%;
@@ -181,12 +189,16 @@ input {
     padding: 15px;
 }
 
-.goods-label {
+.goods-label-container {
     height: 40px;
     padding-top:11px;
     width:40%;
 
     box-sizing: border-box;
+}
+
+.strikeout {
+    text-decoration: line-through;
 }
 
 .add-container {
@@ -223,6 +235,10 @@ input {
     box-shadow: 0 3px 0 #a84b4b;
 }
 
+.min:hover {
+    background-color: indianred;
+}
+
 .number-container {
     margin: 5px;
     width:30px;
@@ -235,6 +251,11 @@ input {
     padding-top:6px;
     border-radius:5px;
     box-sizing: border-box;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .plus-button {
@@ -255,6 +276,10 @@ input {
     background-color: darkgreen;
 }
 
+.hidden {
+    display: none!important;
+}
+
 .sell-button {
     display:inline;
     margin: 5px;
@@ -267,6 +292,24 @@ input {
     box-sizing: border-box;
     box-shadow: 0 3px 0 gray;
     border-radius: 5px;
+}
+
+.nosell-button {
+    display:inline;
+    margin: 5px;
+    width:110px;
+
+    color: #555555;
+    background-color: lightgray;
+    font-weight: bold;
+    font-size: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 0 gray;
+    border-radius: 5px;
+}
+
+.nosell-button:hover {
+    background-color: gray;
 }
 
 .sell-button:hover {
