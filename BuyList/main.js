@@ -25,21 +25,23 @@ function addGoods(name) {
         '                    <span class = "right-number">1</span>\n' +
         '                </div>');
     node.find("label").click(function() {
-        $(this).addClass("hidden");
-        let input = $('<input focus class = "goods-input-field" type="text" value ="' + this.innerText + '"></input>')[0];
+        if(this !== node.find(".strikeout")[0]) {
+            $(this).addClass("hidden");
+            let input = $('<input focus class = "goods-input-field" type="text" value ="' + this.innerText + '"></input>')[0];
 
-        input.oninput = function() {
-            node.find("label")[0].innerText = this.value;
-            dopNode.find(".right-goods-name")[0].innerText = this.value;
-        };
+            input.oninput = function () {
+                node.find("label")[0].innerText = this.value;
+                dopNode.find(".right-goods-name")[0].innerText = this.value;
+            };
 
-        input.onblur = function() {
-            input.remove();
-            node.find("label").removeClass("hidden");
+            input.onblur = function () {
+                input.remove();
+                node.find("label").removeClass("hidden");
+            }
+
+            node.find(".goods-label-container").append(input);
+            input.focus();
         }
-
-        node.find(".goods-label-container").append(input);
-        input.focus();
     });
 
     node.find(".plus-button").click(function() {
@@ -82,8 +84,7 @@ function addGoods(name) {
         const button = $('<button class = "nosell-button" data-tooltip="Не купувати">Не куплено</button>');
         node.find(".delete-container").append(button);
 
-        node.find(".goods-label").addClass("strikeout");
-
+        node.find("label").addClass("strikeout");
         button.click(function() {
             button.remove();
 
@@ -97,7 +98,7 @@ function addGoods(name) {
             sellB.removeClass("hidden");
             delB.removeClass("hidden");
 
-            node.find(".goods-label").removeClass("strikeout");
+            node.find("label").removeClass("strikeout");
         });
     });
 
