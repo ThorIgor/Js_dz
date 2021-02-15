@@ -128,7 +128,7 @@ input {
     border-radius: 5px;
 }
 
-@media(max-width:600px) {
+@media(max-width:500px) {
     .doubled {
        display:block;
     }
@@ -333,6 +333,8 @@ input {
 }
 
 .remained-container {
+    display: flex;
+    flex-wrap: wrap;
     padding: 15px;
 }
 

@@ -35,8 +35,13 @@ function addGoods(name) {
             };
 
             input.onblur = function () {
-                input.remove();
-                node.find("label").removeClass("hidden");
+                if(this.value == "")
+                    this.focus();
+                else {
+                    input.remove();
+                    node.find("label").removeClass("hidden");
+                    dopNode.find(".right-goods-name")[0].innerText = this.value;
+                }
             }
 
             node.find(".goods-label-container").append(input);
@@ -125,6 +130,7 @@ $(".input-button").click(function() {
     addGoods(input.value);
 
     input.value = "";
+    input.focus();
 });
 
 $(".input-field").keydown(function(e) {
