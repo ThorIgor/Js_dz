@@ -40,13 +40,30 @@
     </div>
 </nav>
 
-<div id="cart" class = "col-lg-3 col-md-4 col-sm-5 col-xs-6">
+<div id="order_list" class = "col-lg-3 col-md-4 col-sm-5 col-xs-6">
+    <div class = "title-container">
+        <span>
+            Замовлення
+            <div class = "number-order">3</div>
+        </span>
+        <button class = "btn btn-default">Очистити замовлення</button>
+    </div>
+    <div class = "main-container">
 
+    </div>
+    <div class = "footer-container">
+        <div style = "padding:10px 0 10px 0;">
+            <span style = "font-size: 16px; font-weight: bold; margin-right: 5px;">Сума замовлення:</span>
+            <span style = "font-size: 20px; font-weight: bold; position: absolute; right: 5px">924 грн</span>
+        </div>
+        <button class = "btn btn-warning">Замовлення</button>
+    </div>
 </div>
 
 <div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 container-grid">
     <div class = "d-flex justify-content-center p-3">
-        <div style = "font-size: 30px">Усі піци</div>
+        <span style = "font-size: 30px">Усі піци</span>
+        <div class = "number-pizza">3</div>
     </div>
     <div class = "sort-btn d-flex justify-content-center p-3">
         <button class = "btn btn-warning m-1"> Усі </button>
@@ -58,7 +75,7 @@
     </div>
 
     <div class="row" id="pizza_list">
-        <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
             <div class="card pizza-card">
                 <img class="card-img-top" src="assets/images/pizza_1.jpg">
                 <div class = "card-body">
@@ -75,7 +92,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
             <div class="card pizza-card">
                 <img class="card-img-top" src="assets/images/pizza_2.jpg">
                 <div class = "card-body">
@@ -92,7 +109,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
             <div class="card pizza-card">
                 <img class="card-img-top" src="assets/images/pizza_3.jpg">
                 <div class = "card-body">
@@ -108,6 +125,19 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div id = "bottom-text" class = "col-lg-9 col-md-8 col-sm-7 col-xs-6">
+    <div>Pizza22 - практичний проект в межах курсу JavaScript в Києво-Могилянській академії</div>
+    Тхорук Ігор
+</div>
+
+<div id = "discount">
+    <img src = "assets/images/discount.svg">
+    <div class = "container">
+        <div style = "border-bottom: 2px dotted #d16200;">Цього тижння на все</div>
+        <div>-20%</div>
     </div>
 </div>
 
