@@ -1,4 +1,4 @@
-@mainColor: blue;
+@mainColor: #ea862e;
 
 @import "pizza/pizza-card";
 @import "header";
@@ -6,7 +6,12 @@
 
 body {
   background: antiquewhite;
-  min-width:600px;
+}
+
+@media(max-width:579px) {
+  #order_list {
+    display: none;
+  }
 }
 
 #discount {

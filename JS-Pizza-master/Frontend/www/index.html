@@ -35,7 +35,7 @@
             <div class="navbar-nav mr-auto">
                 <span class="nav-text d-none d-sm-block mr-auto">Піца</span>
             </div>
-            <div class="btn btn-warning d-block d-sm-none ">Ввійти</div>
+            <button class="btn btn-warning d-block d-sm-none ">Ввійти</button>
         </div>
     </div>
 </nav>
@@ -49,7 +49,63 @@
         <button class = "btn btn-default">Очистити замовлення</button>
     </div>
     <div class = "main-container">
-
+        <div class = "pizza-order">
+            <div style = "display: inline-block">
+                <div class = "pizza-name">BBQ(Мала)</div>
+                <div style = "padding-left:5px">
+                    <img style = "width:8px" src = "assets/images/size-icon.svg">
+                    30
+                    <img style="width: 8px" src = "assets/images/weight.svg">
+                    480
+                </div>
+                <div style = " padding-left:5px;padding-top: 10px">
+                    <span class = "pizza-price">556 грн</span>
+                    <button class = "btn btn-danger">-</button>
+                    <span style ="padding: 3px 10px 0 10px">1</span>
+                    <button class = "btn btn-success">+</button>
+                    <button class = "btn btn-default">x</button>
+                </div>
+            </div>
+            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
+        </div>
+        <div class = "pizza-order">
+            <div style = "display: inline-block">
+                <div class = "pizza-name">BBQ(Мала)</div>
+                <div style = "padding-left:5px">
+                    <img style = "width:8px" src = "assets/images/size-icon.svg">
+                    30
+                    <img style="width: 8px" src = "assets/images/weight.svg">
+                    480
+                </div>
+                <div style = " padding-left:5px;padding-top: 10px">
+                    <span class = "pizza-price">556 грн</span>
+                    <button class = "btn btn-danger">-</button>
+                    <span style ="padding: 3px 10px 0 10px">1</span>
+                    <button class = "btn btn-success">+</button>
+                    <button class = "btn btn-default">x</button>
+                </div>
+            </div>
+            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
+        </div>
+        <div class = "pizza-order">
+            <div style = "display: inline-block">
+                <div class = "pizza-name">Россо Гусо(Мала)</div>
+                <div style = "padding-left:5px">
+                    <img style = "width:8px" src = "assets/images/size-icon.svg">
+                    30
+                    <img style="width: 8px" src = "assets/images/weight.svg">
+                    400
+                </div>
+                <div style = " padding-left:5px;padding-top: 10px">
+                    <span class = "pizza-price">556 грн</span>
+                    <button class = "btn btn-danger">-</button>
+                    <span style ="padding: 3px 10px 0 10px">1</span>
+                    <button class = "btn btn-success">+</button>
+                    <button class = "btn btn-default">x</button>
+                </div>
+            </div>
+            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
+        </div>
     </div>
     <div class = "footer-container">
         <div style = "padding:10px 0 10px 0;">
@@ -79,14 +135,40 @@
             <div class="card pizza-card">
                 <img class="card-img-top" src="assets/images/pizza_1.jpg">
                 <div class = "card-body">
-                    <div class="caption"><h3>Thumbnail label</h3>
+                    <div class="caption d-flex flex-column ">
+                        <h3>Thumbnail label</h3>
 
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
-                        <p>
-                            <a href="#" class="btn btn-primary">Button 2</a>
-                            <a href="#" class="btn btn-default ">Button 1</a>
-                        </p>
+                        <div class = "price-container d-flex justify-content-around mt-auto">
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -96,14 +178,39 @@
             <div class="card pizza-card">
                 <img class="card-img-top" src="assets/images/pizza_2.jpg">
                 <div class = "card-body">
-                    <div class="caption"><h3>Thumbnail label</h3>
+                    <div class="caption d-flex flex-column ">
+                        <h3>Thumbnail label</h3>
 
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
-                        <p>
-                            <a href="#" class="btn btn-primary">Button 2</a>
-                            <a href="#" class="btn btn-default ">Button 1</a>
-                        </p>
+                        <div class = "price-container d-flex justify-content-around mt-auto">
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,14 +220,39 @@
             <div class="card pizza-card">
                 <img class="card-img-top" src="assets/images/pizza_3.jpg">
                 <div class = "card-body">
-                    <div class="caption"><h3>Thumbnail label</h3>
+                    <div class="caption d-flex flex-column">
+                        <h3>Thumbnail label</h3>
 
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p> at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
-                        <p>
-                            <a href="#" class="btn btn-primary">Button 2</a>
-                            <a href="#" class="btn btn-default ">Button 1</a>
-                        </p>
+                        <div class = "price-container d-flex justify-content-around mt-auto">
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
