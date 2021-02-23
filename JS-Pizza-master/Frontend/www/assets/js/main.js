@@ -248,6 +248,19 @@ function removeFromCart(cart_item) {
     updateCart();
 }
 
+function setLocalStorage() {
+    localStorage.clear();
+    for(let i = 0; i < Cart.length; i++)
+        localStorage.setItem(i + '', JSON.stringify(Cart[i]));
+}
+
+function getLocalStorage() {
+    let pizza_cart = [];
+    for(let i = 0; i < localStorage.length; i++)
+        pizza_cart.push(JSON.parse(localStorage.getItem(i + '')));
+    return pizza_cart;
+}
+
 function initialiseCart() {
     //Фукнція віпрацьвуватиме при завантаженні сторінки
     //Тут можна наприклад, зчитати вміст корзини який збережено в Local Storage то показати його
@@ -255,6 +268,8 @@ function initialiseCart() {
         Cart = [];
         updateCart();
     });
+
+    Cart = getLocalStorage();
 
     updateCart();
 }
@@ -314,6 +329,8 @@ function updateCart() {
 
         $cart.append($node);
     }
+
+    setLocalStorage();
 
     Cart.forEach(showOnePizzaInCart);
 }
