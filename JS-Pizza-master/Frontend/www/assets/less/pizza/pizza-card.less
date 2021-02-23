@@ -1,5 +1,5 @@
 
-.number-pizza {
+#number-pizza {
   display: inline-block;
   margin-top: 14px;
   margin-left: 10px;
@@ -34,8 +34,31 @@
   h3 {
     color: @mainColor;
   }
+
+  .type {
+    font-size: 12px;
+    color: lightgray;
+  }
   .caption {
     height:100%;
+
+    .new {
+      padding: 3px;
+      width: min-content;
+      background: forestgreen;
+      border-radius: 5px;
+      color:white;
+      font-weight: bold;
+    }
+    .popular {
+      padding: 3px;
+      width: min-content;
+      background: orange;
+      border-radius: 5px;
+      color:white;
+      font-weight: bold;
+    }
+
   }
 
   .price-container {

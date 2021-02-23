@@ -44,111 +44,17 @@
     <div class = "title-container">
         <span>
             Замовлення
-            <div class = "number-order">3</div>
+            <div id = "number-order">3</div>
         </span>
-        <button class = "btn btn-default">Очистити замовлення</button>
+        <button id = "delete_all_orders" class = "btn btn-default">Очистити замовлення</button>
     </div>
-    <div class = "main-container">
-        <div class = "pizza-order">
-            <div style = "display: inline-block">
-                <div class = "pizza-name">BBQ(Мала)</div>
-                <div style = "padding-left:5px">
-                    <img style = "width:8px" src = "assets/images/size-icon.svg">
-                    30
-                    <img style="width: 8px" src = "assets/images/weight.svg">
-                    480
-                </div>
-                <div style = " padding-left:5px;padding-top: 10px">
-                    <span class = "pizza-price">556 грн</span>
-                    <button class = "btn btn-danger">-</button>
-                    <span style ="padding: 3px 10px 0 10px">1</span>
-                    <button class = "btn btn-success">+</button>
-                    <button class = "btn btn-default">x</button>
-                </div>
-            </div>
-            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
-        </div>
-        <div class = "pizza-order">
-            <div style = "display: inline-block">
-                <div class = "pizza-name">BBQ(Мала)</div>
-                <div style = "padding-left:5px">
-                    <img style = "width:8px" src = "assets/images/size-icon.svg">
-                    30
-                    <img style="width: 8px" src = "assets/images/weight.svg">
-                    480
-                </div>
-                <div style = " padding-left:5px;padding-top: 10px">
-                    <span class = "pizza-price">556 грн</span>
-                    <button class = "btn btn-danger">-</button>
-                    <span style ="padding: 3px 10px 0 10px">1</span>
-                    <button class = "btn btn-success">+</button>
-                    <button class = "btn btn-default">x</button>
-                </div>
-            </div>
-            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
-        </div>
-        <div class = "pizza-order">
-            <div style = "display: inline-block">
-                <div class = "pizza-name">Россо Гусо(Мала)</div>
-                <div style = "padding-left:5px">
-                    <img style = "width:8px" src = "assets/images/size-icon.svg">
-                    30
-                    <img style="width: 8px" src = "assets/images/weight.svg">
-                    400
-                </div>
-                <div style = " padding-left:5px;padding-top: 10px">
-                    <span class = "pizza-price">556 грн</span>
-                    <button class = "btn btn-danger">-</button>
-                    <span style ="padding: 3px 10px 0 10px">1</span>
-                    <button class = "btn btn-success">+</button>
-                    <button class = "btn btn-default">x</button>
-                </div>
-            </div>
-            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
-        </div>
-        <div class = "pizza-order">
-            <div style = "display: inline-block">
-                <div class = "pizza-name">Россо Гусо(Мала)</div>
-                <div style = "padding-left:5px">
-                    <img style = "width:8px" src = "assets/images/size-icon.svg">
-                    30
-                    <img style="width: 8px" src = "assets/images/weight.svg">
-                    400
-                </div>
-                <div style = " padding-left:5px;padding-top: 10px">
-                    <span class = "pizza-price">556 грн</span>
-                    <button class = "btn btn-danger">-</button>
-                    <span style ="padding: 3px 10px 0 10px">1</span>
-                    <button class = "btn btn-success">+</button>
-                    <button class = "btn btn-default">x</button>
-                </div>
-            </div>
-            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
-        </div>
-        <div class = "pizza-order">
-            <div style = "display: inline-block">
-                <div class = "pizza-name">Россо Гусо(Мала)</div>
-                <div style = "padding-left:5px">
-                    <img style = "width:8px" src = "assets/images/size-icon.svg">
-                    30
-                    <img style="width: 8px" src = "assets/images/weight.svg">
-                    400
-                </div>
-                <div style = " padding-left:5px;padding-top: 10px">
-                    <span class = "pizza-price">556 грн</span>
-                    <button class = "btn btn-danger">-</button>
-                    <span style ="padding: 3px 10px 0 10px">1</span>
-                    <button class = "btn btn-success">+</button>
-                    <button class = "btn btn-default">x</button>
-                </div>
-            </div>
-            <img class = "pizza-icon" src = "assets/images/pizza_1.jpg">
-        </div>
+    <div id = "main-container">
+
     </div>
     <div class = "footer-container">
         <div style = "padding:10px 0 10px 0;">
             <span style = "font-size: 16px; font-weight: bold; margin-right: 5px;">Сума замовлення:</span>
-            <span style = "font-size: 20px; font-weight: bold; position: absolute; right: 5px">924 грн</span>
+            <span id = "price-field" style = "font-size: 20px; font-weight: bold; position: absolute; right: 5px">924 грн</span>
         </div>
         <button class = "btn btn-warning">Замовлення</button>
     </div>
@@ -157,15 +63,16 @@
 <div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 container-grid">
     <div class = "d-flex justify-content-center p-3">
         <span style = "font-size: 30px">Усі піци</span>
-        <div class = "number-pizza">3</div>
+        <div id = "number-pizza">3</div>
     </div>
     <div class = "sort-btn d-flex justify-content-center p-3">
-        <button class = "btn btn-warning m-1"> Усі </button>
-        <button class = "btn btn-warning m-1"> М'ясні </button>
-        <button class = "btn btn-warning m-1"> З ананасами </button>
-        <button class = "btn btn-warning m-1"> З грибами </button>
-        <button class = "btn btn-warning m-1"> З морепродуктами </button>
-        <button class = "btn btn-warning m-1"> Вега </button>
+        <button class = "btn btn-warning m-1" id = "sort-all"> Усі </button>
+        <button class = "btn btn-warning m-1" id = "sort-meat"> М'ясні </button>
+        <button class = "btn btn-warning m-1" id = "sort-chicken"> З куркою </button>
+        <button class = "btn btn-warning m-1" id = "sort-pineapple"> З ананасами </button>
+        <button class = "btn btn-warning m-1" id = "sort-mushroom"> З грибами </button>
+        <button class = "btn btn-warning m-1" id = "sort-seafood"> З морепродуктами </button>
+        <button class = "btn btn-warning m-1" id = "sort-vega"> Вега </button>
     </div>
 
     <div class="row" id="pizza_list">
@@ -174,8 +81,9 @@
                 <img class="card-img-top" src="assets/images/pizza_1.jpg">
                 <div class = "card-body">
                     <div class="caption d-flex flex-column ">
+                        <span class = "new">Нова</span>
                         <h3>Thumbnail label</h3>
-
+                        <div class = "type">Мясна піца</div>
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
                         <div class = "price-container d-flex justify-content-around mt-auto">
@@ -217,8 +125,9 @@
                 <img class="card-img-top" src="assets/images/pizza_2.jpg">
                 <div class = "card-body">
                     <div class="caption d-flex flex-column ">
+                        <span class = "popular">Популярна</span>
                         <h3>Thumbnail label</h3>
-
+                        <div class = "type">Мясна піца</div>
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
                         <div class = "price-container d-flex justify-content-around mt-auto">
@@ -260,7 +169,7 @@
                 <div class = "card-body">
                     <div class="caption d-flex flex-column">
                         <h3>Thumbnail label</h3>
-
+                        <div class = "type">Мясна піца</div>
                         <p> at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
                         <div class = "price-container d-flex justify-content-around mt-auto">
@@ -318,6 +227,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
-<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
 </body>
 </html>
