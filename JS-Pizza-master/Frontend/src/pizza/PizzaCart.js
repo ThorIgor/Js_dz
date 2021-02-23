@@ -93,11 +93,11 @@ function updateCart() {
         });
 
         $node.find(".minus").click(function () {
-            cart_item.quantity -= 1;
-            if (cart_item.quantity === 0)
+            if (cart_item.quantity === 1)
                 removeFromCart(cart_item);
             else
-                updateCart()
+                cart_item.quantity -= 1;
+            updateCart();
         });
 
         $node.find(".delete").click(function () {

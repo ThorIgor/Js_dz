@@ -35,7 +35,6 @@ function showPizzaList(list) {
 function filterPizza(filter) {
     //Масив куди потраплять піци які треба показати
     var pizza_shown = [];
-    console.log(filter);
     if (filter === 'all') {
         Pizza_List.forEach(function (pizza) {
             //Якщо піка відповідає фільтру
