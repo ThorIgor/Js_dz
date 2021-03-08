@@ -1,3 +1,4 @@
+@footerHeight: 120px;
 
 #order_list {
   z-index: 10;
@@ -49,7 +50,7 @@
   #main-container {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 512px;
+    height: ~"calc(100% - 210px)";
 
     .pizza-order {
       position: relative;
@@ -104,7 +105,7 @@
     position: absolute;
     bottom:0;
     width:100%;
-    height: 120px;
+    height: @footerHeight;
 
     padding: 5px;
 

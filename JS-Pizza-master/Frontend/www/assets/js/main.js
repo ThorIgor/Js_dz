@@ -231,7 +231,7 @@ function addToCart(pizza, size) {
         size: size,
         quantity: 1
     }
-    let found = Cart.find(item=>(item.pizza === pizza && item.size === size));
+    let found = Cart.find(item=>(item.pizza.id === pizza.id && item.size === size));
     if(found)
         found.quantity += 1;
     else
@@ -240,9 +240,19 @@ function addToCart(pizza, size) {
     updateCart();
 }
 
+function findCartElementIndex(pizza, size) {
+    let i = undefined;
+    Cart.forEach( (p,index) => {
+        if(pizza.id === p.pizza.id && size === p.size){
+            i = index;
+        }
+    })
+    return i;
+}
+
 function removeFromCart(cart_item) {
     //Видалити піцу з кошика
-    Cart.splice(cart_item, 1);
+    Cart.splice(Cart.indexOf(cart_item), 1);
 
     //Після видалення оновити відображення
     updateCart();
