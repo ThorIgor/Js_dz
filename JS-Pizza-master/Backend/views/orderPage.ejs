@@ -1,5 +1,33 @@
 <% include common/header.ejs %>
 
-
+<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 p-5">
+    <h2>1. Контактні дані</h2>
+    <form>
+        <div class="form-group">
+            <label for="nameInput">Ім'я</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Ім'я Фамілія">
+        </div>
+        <div class="form-group">
+            <label for="phoneInput">Телефон</label>
+            <input type="tel" class="form-control" id="phoneInput" placeholder="+380991234567">
+        </div>
+        <div class="form-group">
+            <label for="addressInput">Адреса</label>
+            <input type="text" class="form-control" id="addressInput" placeholder="Київ, вул. Спаська, 2">
+        </div>
+    </form>
+    <div class="info-container p-4">
+        <h4>Інформація про замовлення</h4>
+        <div class="d-flex">
+            <h6>Приблизний час доставки:</h6>
+            <h6 id="timeOrder" style = "font-weight: normal; padding-left: 5px">невідомо</h6>
+        </div>
+        <div class="d-flex">
+            <h6>Адреса доставки:</h6>
+            <h6 id="addressOrder" style = "font-weight: normal; padding-left: 5px">невідомо</h6>
+        </div>
+    </div>
+    <a></a>
+</div>
 
 <% include common/footer.ejs %>
