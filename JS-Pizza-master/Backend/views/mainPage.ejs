@@ -1,5 +1,25 @@
 <% include common/header.ejs %>
 
+<div id="order_list" class = "col-lg-3 col-md-4 col-sm-5 col-xs-6">
+    <div class = "title-container">
+        <span>
+            Замовлення
+            <div id = "number-order">3</div>
+        </span>
+        <button id = "delete_all_orders" class = "btn btn-default">Очистити замовлення</button>
+    </div>
+    <div id = "main-container">
+
+    </div>
+    <div class = "footer-container">
+        <div style = "padding:10px 0 10px 0;">
+            <span style = "font-size: 16px; font-weight: bold; margin-right: 5px;">Сума замовлення:</span>
+            <span id = "price-field" style = "font-size: 20px; font-weight: bold; position: absolute; right: 5px">924 грн</span>
+        </div>
+        <a href = "/order.html" class = "btn change">Замовити</a>
+    </div>
+</div>
+
 <div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 container-grid">
     <div class = "d-flex justify-content-center p-3">
         <span style = "font-size: 30px">Усі піци</span>
