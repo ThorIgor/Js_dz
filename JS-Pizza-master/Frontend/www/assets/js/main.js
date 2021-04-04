@@ -406,6 +406,9 @@ var API = require('../API');
 var $pizza_list = $("#pizza_list");
 var $number_field = $("#number-pizza")[0];
 
+var directionsRenderer = new google.maps.DirectionsRenderer();
+
+var homeMraker = null;
 
 // For text check
 var nameI = false, phoneI = false, addressI = false;
@@ -612,14 +615,15 @@ function	geocodeAddress(address,	 callback)	{
 }
 
 function	calculateRoute(A_latlng,	 B_latlng,	callback)	{
-    var directionService =	new	google.maps.DirectionsService();
+    var directionService = new google.maps.DirectionsService();
     directionService.route({
         origin:	A_latlng,
         destination:	B_latlng,
         travelMode:	google.maps.TravelMode["DRIVING"]
     },	function(response,	status)	{
         if	(	status	==	google.maps.DirectionsStatus.OK )	{
-            varleg	=	response.routes[	0	].legs[	0	];
+            var leg	=	response.routes[	0	].legs[	0	];
+            directionsRenderer.setDirections(response);
             callback(null,	{
                 duration:	leg.duration
             });
@@ -628,6 +632,8 @@ function	calculateRoute(A_latlng,	 B_latlng,	callback)	{
         }
     });
 }
+
+
 
 function	initialize()	{
 //Тут починаємо працювати з картою
@@ -645,13 +651,28 @@ function	initialize()	{
         icon:	"assets/images/map-icon.png"
     });
 
+
+
+    directionsRenderer.setMap(map);
+
     $("#addressInput").keyup(function(){
         geocodeAddress(this.value, function(error, adress) {
             if(!error) {
-                var markerHome	=	new	google.maps.Marker({
-                    position:	adress,
-                    map:	map,
-                    icon:	"assets/images/home-icon.png"
+                if(!homeMraker) {
+                    homeMraker = new google.maps.Marker({
+                        position: adress,
+                        map: map,
+                        icon: "assets/images/home-icon.png"
+                    });
+                } else {
+                    homeMraker.setPosition(adress);
+                }
+                calculateRoute(marker.position, homeMraker.position, function(error, distance) {
+                    if(!error) {
+                        $("#timeOrder").text(distance.duration.text);
+                    } else {
+                        $("#timeOrder").text("невідомо");
+                    }
                 });
             }
             else
@@ -666,7 +687,24 @@ function	initialize()	{
                 if(!err)	{
                     $("#addressInput").val(adress);
                     $("#addressOrder").text(adress);
-                    console.log(adress);
+                    addressI = true;
+                    checkTextFields();
+                    if(!homeMraker) {
+                        homeMraker = new google.maps.Marker({
+                            position: coordinates,
+                            map: map,
+                            icon: "assets/images/home-icon.png"
+                        });
+                    } else {
+                        homeMraker.setPosition(coordinates);
+                    }
+                    calculateRoute(marker.position, homeMraker.position, function(error, distance) {
+                        if(!error) {
+                            $("#timeOrder").text(distance.duration.text);
+                        } else {
+                            $("#timeOrder").text("невідомо");
+                        }
+                    });
                 }	else	{
                     console.log("Немає адреси")
                 }
@@ -676,6 +714,7 @@ function	initialize()	{
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
 
 
 exports.filterPizza = filterPizza;
