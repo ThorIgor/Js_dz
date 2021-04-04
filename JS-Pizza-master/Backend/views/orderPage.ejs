@@ -34,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="addressInput">Адреса</label>
-            <input type="text" name = "address" class="form-control" id="addressInput" placeholder="Київ, вул. Спаська, 2">
+            <input type="text" name = "address" class="form-control" id="addressInput" placeholder="проспект Степана Бандери, 13, Київ, Україна, 02000">
             <label id="addressError"></label>
         </div>
     </form>
@@ -50,6 +50,12 @@
         </div>
         <button id = "submit-order" class = "btn btn-warning m-2">Далі</button>
     </div>
+
+    <div id = "googleMap"
+    style = "margin-top: 20px; width:100%; height:500px;"></div>
 </div>
+
+
+<div id="liqpay"></div>
 
 <% include common/footer.ejs %>
