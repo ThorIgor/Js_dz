@@ -271,6 +271,9 @@ function	initialize()	{
                 } else {
                     homeMraker.setPosition(adress);
                 }
+                geocodeLatLng(adress, function(error, adr) {
+                    $("#addressOrder").text(adr);
+                });
                 calculateRoute(marker.position, homeMraker.position, function(error, distance) {
                     if(!error) {
                         $("#timeOrder").text(distance.duration.text);
@@ -291,6 +294,8 @@ function	initialize()	{
                 if(!err)	{
                     $("#addressInput").val(adress);
                     $("#addressOrder").text(adress);
+                    $("#address").css("color","green");
+                    $("#addressError").text("");
                     addressI = true;
                     checkTextFields();
                     if(!homeMraker) {

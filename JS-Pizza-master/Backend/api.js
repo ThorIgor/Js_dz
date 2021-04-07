@@ -39,7 +39,7 @@ function parse_order_info(order_info) {
     let pizzas = order_info.pizzas;
     str += order_info.login + ", " + order_info.phoneNumber + ", " + order_info.address + "\n";
     for (let i = 0; i < pizzas.length;i++){
-        str += pizzas[i].pizza.title + " - " + pizzas[i].size + "\n";
+        str += pizzas[i].pizza.title + "(" + pizzas[i].size + ")" + "\n";
     }
     return str;
 }
